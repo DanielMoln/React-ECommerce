@@ -24,6 +24,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
+
 // how our app will behave
 provider.setCustomParameters({
   prompt: "select_account",
@@ -31,6 +32,8 @@ provider.setCustomParameters({
 
 export const auth = getAuth();
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, provider);
 
 export const db = getFirestore();
 
