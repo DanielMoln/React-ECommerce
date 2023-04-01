@@ -2,11 +2,11 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
-import SignIn from "./components/sign-in/sign-in.component";
+import SignIn from "./routes/sign-in/sign-in.component";
 
 const Shop = () => {
-  return <h1>Shop</h1>
-}
+  return <h1>Shop</h1>;
+};
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="sign-in" element={<SignIn />} />
       </Route>
     </Routes>
-  )
+  );
 };
 
 export default App;
